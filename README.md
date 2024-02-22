@@ -11,3 +11,4 @@ Rename the shortcut to a meaningful name; I use “DataDevelopement” in this e
 
 Figure 2: Creating a shortcut (image by author)
 With the local file system organised, and the personal Google Drive configured, we can try to work with this shared folder in a Python notebook and automate the file sharing in the project.
+ To Check here https://towardsdatascience.com/simplify-file-sharing-44bde79a8a18
