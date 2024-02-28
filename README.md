@@ -1,4 +1,12 @@
 # Deep Learning Models for Atypical Serotoninergic Cells Recognition
+[![Paper](https://img.shields.io/badge/cs.CV-Paper-b31b1b?logo=arxiv&logoColor=red)](https://arxiv.org/)
+
+> **Deep Learning Models for Atypical Serotoninergic Cells Recognition**<br>
+> [Corradetti Daniele](https://ualg.academia.edu/DanieleCorradetti), [Bernardi Alessandro](https://www.linkedin.com/in/alessandro-bernardi/), [Corradetti Renato](https://unifi.academia.edu/RenatoCorradetti)<br>
+> *Grupo de Fisica Matematica, Instituto Superior Tecnico, Av. Rovisco Pais, Lisboa, 1049-001, Portugal*
+> *Departamento de Matematica, Universidade do Algarve, Campus de Gambelas, Faro, 8005-139, Faro, Portugal*
+> *Department of Neuroscience, Psychology, Drug Research and Child Health (NEUROFARBA), University of Florence, Viale G. Pieraccini 6, Firenze, 50139, Toscana, Italy*
+
 **Authors**: *Corradetti Daniele, Bernardi Alessandro, Corradetti Renato*
 
 **Date**: February 28, 2024
@@ -17,6 +25,17 @@ In this GitHub repository are available the following:
 5. the trained models with different kernels,
 6. the results of the models,
 7. the Python notebooks for training of the models and for inference.
+
+## Citation
+
+```bibtex
+@article{CorradettiBernardiCorradetti2024,
+    title={Deep Learning Models for Atypical Serotoninergic Cells Recognition},
+    author={Corradetti Daniele, Bernardi Alessandro, Corradetti Renato},
+    journal={arXiv},
+    year={2024}
+}
+```
 
 ## Data Requirements
 Libraries: TensorFlow version 2.14
