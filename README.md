@@ -1,5 +1,6 @@
 # Deep Learning Models for Atypical Serotoninergic Cells Recognition
-[![Paper](https://img.shields.io/badge/version-1.0-blue)]() [![Paper](https://img.shields.io/badge/cs.CV-Paper-b31b1b?
+[![Paper](https://img.shields.io/badge/version-1.0-blue)]() [![Paper](https://img.shields.io/badge/cs.CV-Paper-b31b1b?logo=arxiv&logoColor=red)](https://arxiv.org/)
+
 
 > **Deep Learning Models for Atypical Serotoninergic Cells Recognition**<br>
 >**Date**: February 28, 2024<br>
