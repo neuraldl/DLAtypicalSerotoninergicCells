@@ -74,14 +74,16 @@ The synthetic data consisted in 6,675,300 spike samples of 160 points (simulatin
 The non-homogenous data consisted in 24,616 samples extracted from 55 serotonergic cells (18,595 spikes) and 26 non-serotonergic cells (6,021 spikes) collected in experimental days not used to obtain the training data, thus with different signal noise. These data were never part of the training set, nor validation, nor testing set during the training, and constituted just an additional independent test for
 the already trained model.
 
-### DNN Keras Models and Results 
-ModelsDNN https://drive.google.com/drive/folders/1zjwc-_P6zjsmc77BdwgBhxrEhBGw8Igz?usp=sharing <br>
+## Models and Results
 
-## Architecture
+### Architecture
 The architecture of the models is a sequence of layers commonly used in deep learning, specifically in the context of convolutional neural networks (CNNs) for image or signal processing.
 We implemented the architecture using the Keras libraries in TensorFlow 2. The model of the neural network consists of a normalization layer for stabilizing the learning process and reducing training time; two repetitions of a 2D convolutional layer with 32 filters and a max pooling layer with a pool size of (2x1); a flatten layer to connect to a dropout layer and dense layers with 2 output units used for binary classification. Activation functions of the convolutional layers are the ReLU, while for the dense layer we used the classic sigmoid  
 <figure style="text-align: center;">
   <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ArchitectureWork2.png" alt="Data Pipeline" width="500" />
   <figcaption>Summary of the various steps used to implement the model from recorded signals: from neuronal cell the signal is sampled at 40 kHz and recorded as .abf file, then the all events are selected and sent to 10 neural networks with the above architecture for classification (only difference between the architectures is the value of the 2D convolutional kernel with ranges between 20 to 30).</figcaption>
 </figure>
+
+### DNN Keras Models and Results 
+ModelsDNN https://drive.google.com/drive/folders/1zjwc-_P6zjsmc77BdwgBhxrEhBGw8Igz?usp=sharing <br>
 
