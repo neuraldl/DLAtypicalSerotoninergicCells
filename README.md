@@ -20,6 +20,7 @@ In this GitHub repository are available the following:
 
 ## Data Requirements
 Libraries: TensorFlow version 2.14
+
 Download on your local or cloud device below folders:
 
 ### Biological Data 
@@ -32,9 +33,9 @@ ModelsDNN https://drive.google.com/drive/folders/154nndEf4CnArvT-NpJzNA-eXTmmNJA
 
 ### Synthetic Data
 
-SER Cellulars https://drive.google.com/drive/folders/1k0vLhHIA7Aq0MQZzaan4QeCCEGG69IqL?usp=sharing
+SER Cellulars https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing
 
-NSER Cellulars https://drive.google.com/drive/folders/1i-9tDp-YaFlCy4yZ7F55Ssy8vNzyhm84?usp=sharing
+NSER Cellulars https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing
 
 ### Biological Data Non Homogeneous 
 
