@@ -45,8 +45,8 @@ Libraries: TensorFlow version 2.14
 Download on your local device or cloud service below folders:
 
 ## Original Data
-[![Data](https://img.shields.io/badge/Original-SER-blue)]() SER Cellulars  https://drive.google.com/drive/folders/1OH8HZlfHk17qekf3vjGcXjaARikYGg2E?usp=sharing <br>
-[![Data](https://img.shields.io/badge/Original-NSER-blue)]() NSER Cellulars https://drive.google.com/drive/folders/1SzHVo5lmmJy1U2PvwYhHpvdnFpe9lCyP?usp=sharing <br>
+[![Data](https://img.shields.io/badge/SER-Original-blue)]() SER Cellulars  https://drive.google.com/drive/folders/1OH8HZlfHk17qekf3vjGcXjaARikYGg2E?usp=sharing <br>
+[![Data](https://img.shields.io/badge/NSER-Original-blue)]() NSER Cellulars https://drive.google.com/drive/folders/1SzHVo5lmmJy1U2PvwYhHpvdnFpe9lCyP?usp=sharing <br>
 
 The original data for the training, validation and testing of the models consisted in 43,327 spike samples extracted from 108 serotonergic cells and 45 non-serotonergic cells. More specifically, we extracted
 29,773 spikes from serotonergic cells, and 13,554 spikes from non-serotonergic cells. In all cases, the triggering threshold of the event was -50 pA and the spike was then sampled 1 ms before the triggering threshold until 3 ms after (see Fig. 1). Since the sampling rate of the original recordings was 40 kHz, every spike sample consists of 160 values.
@@ -58,8 +58,8 @@ All the samples were then randomly subdivided into 30,328 for training, 6,500 fo
 
 
 ## Synthetic Data
-[![Data](https://img.shields.io/badge/Synthetic-SER-red)]() SER Cellulars https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing <br>
-[![Data](https://img.shields.io/badge/Synthetic-NSER-red)]() NSER Cellulars https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing <br>
+[![Data](https://img.shields.io/badge/SER-Synthetic-red)]() SER Cellulars https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing <br>
+[![Data](https://img.shields.io/badge/NSER-Synthetic-red)]() NSER Cellulars https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing <br>
 
 The synthetic data consisted in 6,675,300 spike samples of 160 points (simulating 4 ms at 40 kHz of sampling) arising from the 43327 original training data samples. From the original training data recordings we extracted 600 noise masks.
 <figure style="text-align: center;">
@@ -68,8 +68,8 @@ The synthetic data consisted in 6,675,300 spike samples of 160 points (simulatin
 </figure>
 
 ## Non-Homogeonous Data
-[![Data](https://img.shields.io/badge/Non--Homogeneous-SER-rgreen)]() SER Cellulars https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing <br>
-[![Data](https://img.shields.io/badge/Non--Homogeneous-NSER-rgreen)]()NSER Cellulars https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing <br>
+[![Data](https://img.shields.io/badge/SER-Non--Homogeneous-green)]() SER Cellulars https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing <br>
+[![Data](https://img.shields.io/badge/NSER-Non--Homogeneous-green)]()NSER Cellulars https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing <br>
 
 The non-homogenous data consisted in 24,616 samples extracted from 55 serotonergic cells (18,595 spikes) and 26 non-serotonergic cells (6,021 spikes) collected in experimental days not used to obtain the training data, thus with different signal noise. These data were never part of the training set, nor validation, nor testing set during the training, and constituted just an additional independent test for
 the already trained model.
