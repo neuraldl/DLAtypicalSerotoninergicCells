@@ -12,23 +12,11 @@ This repository is aimed to collect the data and models used for *Deep Learning 
 
 ## Overview
 Traditional methods for identifying serotonergic neurons are based on specific electrophysiological characteristics, yet this approach often overlooks atypical neurons, thus limiting our understanding of the serotonergic system's diversity. To address this, we propose deep learning models capable of recognizing both typical and atypical serotonergic and non-serotonergic neurons with high accuracy.The research utilized electrophysiological recordings from dorsal raphe nucleus slices of transgenic mice, expressing fluorescent proteins specific to the serotonergic system. These recordings formed the basis of the training, validation, and testing data for the deep learning models. The study employed convolutional neural networks (CNNs), known for their efficiency in pattern recognition, to classify neurons based on the specific characteristics of their action potentials. The models were trained on a dataset comprising 43,327 original spike samples, alongside an extensive set of 6.7 million synthetic spike samples, designed to mitigate the risk of overfitting the background noise in the recordings, a potential source of bias. Results showed that the models achieved high accuracy and were further validated on "non-homogeneous" data, i.e., data not used for constructing the model, to confirm their robustness and reliability in real-world experimental conditions.
-
-<div style="display:flex; flex-wrap:nowrap; gap:10px;">
-  <figure style="flex:0 0 auto;">
-    <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="370" />
-    <figcaption style="text-align:center;">Distribution of spike duration of serotonergic and non-serotonergic neurons. Histograms report the distribution of spike width measured by the interval between spike upstroke and downstroke (UDI) in serotonergic (blue) and non-serotonergic neurons (red) recorded in slices of dorsal raphe nucleus. Note the overlap in spike duration between serotonergic and non-serotonergic neurons.</figcaption>
-  </figure>
-  <figure style="flex:0 0 auto;">
-    <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure3.png" alt="Figure 3" width="370" />
-    <figcaption style="text-align:center;">Distribution of spike duration recorded from the neurons utilized to develop the model 1. Histograms report the distribution of spike width measured by the interval between spike upstroke and downstroke (UDI) in serotonergic (blue) and non-serotonergic neurons (red) recorded in slices of dorsal raphe nucleus.</figcaption>
-  </figure>
-</div>
-
-
 <div>
-  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="350" style="display:inline-block;" />
+  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="370" style="display:inline-block;" />
   <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure3.png" alt="Figure 3" width="400" style="display:inline-block;" />
 </div>
+Distribution of spike duration of serotonergic and non-serotonergic neurons. Histograms report the distribution of spike width measured by the interval between spike upstroke and downstroke (UDI) in serotonergic (blue) and non-serotonergic neurons (red) recorded in slices of dorsal raphe nucleus. Note the overlap in spike duration between serotonergic and non-serotonergic neurons.
 
 ## Contents of the Repository
 In this GitHub repository are available the following:
