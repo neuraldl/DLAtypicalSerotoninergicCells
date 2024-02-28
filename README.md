@@ -14,7 +14,7 @@ This repository is aimed to collect the data and models used for *Deep Learning 
 Traditional methods for identifying serotonergic neurons are based on specific electrophysiological characteristics, yet this approach often overlooks atypical neurons, thus limiting our understanding of the serotonergic system's diversity. To address this, we propose deep learning models capable of recognizing both typical and atypical serotonergic and non-serotonergic neurons with high accuracy.The research utilized electrophysiological recordings from dorsal raphe nucleus slices of transgenic mice, expressing fluorescent proteins specific to the serotonergic system. These recordings formed the basis of the training, validation, and testing data for the deep learning models. The study employed convolutional neural networks (CNNs), known for their efficiency in pattern recognition, to classify neurons based on the specific characteristics of their action potentials. The models were trained on a dataset comprising 43,327 original spike samples, alongside an extensive set of 6.7 million synthetic spike samples, designed to mitigate the risk of overfitting the background noise in the recordings, a potential source of bias. Results showed that the models achieved high accuracy and were further validated on "non-homogeneous" data, i.e., data not used for constructing the model, to confirm their robustness and reliability in real-world experimental conditions.
 
 <div>
-  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="400" style="display:inline-block;" />
+  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="350" style="display:inline-block;" />
   <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure3.png" alt="Figure 3" width="400" style="display:inline-block;" />
 </div>
 
@@ -46,25 +46,36 @@ Download on your local device or cloud service below folders:
 
 ### Biological Data 
 
-SER Cellulars  https://drive.google.com/drive/folders/1OH8HZlfHk17qekf3vjGcXjaARikYGg2E?usp=sharing
-
-NSER Cellulars https://drive.google.com/drive/folders/1SzHVo5lmmJy1U2PvwYhHpvdnFpe9lCyP?usp=sharing
+SER Cellulars  https://drive.google.com/drive/folders/1OH8HZlfHk17qekf3vjGcXjaARikYGg2E?usp=sharing <br>
+NSER Cellulars https://drive.google.com/drive/folders/1SzHVo5lmmJy1U2PvwYhHpvdnFpe9lCyP?usp=sharing <br>
 
 ### DNN Keras Models and Results 
 
-ModelsDNN https://drive.google.com/drive/folders/1zjwc-_P6zjsmc77BdwgBhxrEhBGw8Igz?usp=sharing
+ModelsDNN https://drive.google.com/drive/folders/1zjwc-_P6zjsmc77BdwgBhxrEhBGw8Igz?usp=sharing <br>
 
 ### Synthetic Data
 
-SER Cellulars https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing
-
-NSER Cellulars https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing
+SER Cellulars https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing <br>
+NSER Cellulars https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing <br>
 
 ### Biological Data Non Homogeneous 
 
-SER Cellulars https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing
+SER Cellulars https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing <br>
+NSER Cellulars https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing <br>
 
-NSER Cellulars https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing
+## Architecture
+The architecture of the models is a sequence of layers commonly used in deep learning, specifically in the context of convolutional neural networks (CNNs) for image or signal processing.
+We implemented the architecture using the Keras libraries in TensorFlow 2. The model of the neural network consists of a normalization layer for stabilizing the learning process and reducing training time; two repetitions of a 2D convolutional layer with 32 filters and a max pooling layer with a pool size of (2x1); a flatten layer to connect to a dropout layer and dense layers with 2 output units used for binary classification. Activation functions of the convolutional layers are the ReLU, while for the dense layer we used the classic sigmoid  
+<figure>
+  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ArchitectureWork2.png" alt="Data Pipeline" width="400" />
+  <figcaption>Summary of the various steps used to implement the model from recorded signals: from neuronal cell the signal is sampled at 40 kHz and recorded as .abf file, then the all events are selected and sent to 10 neural networks with the above architecture for classification (only difference between the architectures is the value of the 2D convolutional kernel with ranges between 20 to 30).</figcaption>
+</figure>
 
 
-<img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ArchitectureWork2.png" alt="Data Pipeline" width="400" />
+## Synthetic Data
+The synthetic data consisted in 6,675,300 spike samples of 160 points (simulating 4 ms at 40 kHz of sampling) arising from the 43327 original training data samples. From the original training data recordings we extracted 600 noise masks.
+<figure>
+  <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/SyntheticData.png" alt="Data Pipeline" width="400" />
+  <figcaption>Example of 4 synthetic spikes generated by the event triggered at 1007585, i.e. 25.189 sec, of the serotonergic cell A140313#073. Top trace: the original recording of the event. The panels report four spike obtained by processing the original trace with different noise masks.</figcaption>
+</figure>
+
