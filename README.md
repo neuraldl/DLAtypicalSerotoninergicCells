@@ -37,7 +37,7 @@ In this GitHub repository are available the following:
 ## Data Requirements
 Libraries: TensorFlow version 2.14
 
-Download on your local or cloud device below folders:
+Download on your local device or cloud service below folders:
 
 ### Biological Data 
 
