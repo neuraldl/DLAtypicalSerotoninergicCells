@@ -69,8 +69,8 @@ The synthetic data consisted in 6,675,300 spike samples of 160 points (simulatin
 </figure>
 
 ## Non-Homogeonous Data
-[![Data](https://img.shields.io/badge/SER-Non--Homogeneous-green)]() SER Cellulars [ [Data](https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing) ] <br>
-[![Data](https://img.shields.io/badge/NSER-Non--Homogeneous-green)]() NSER Cellulars [ [Data](https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing) ] <br>
+[![Data](https://img.shields.io/badge/SER-Non--Hom-green)]() SER Cellulars [ [Data](https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing) ] <br>
+[![Data](https://img.shields.io/badge/NSER-Non--Hom-green)]() NSER Cellulars [ [Data](https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing) ] <br>
 
 The non-homogenous data consisted in 24,616 samples extracted from 55 serotonergic cells (18,595 spikes) and 26 non-serotonergic cells (6,021 spikes) collected in experimental days not used to obtain the training data, thus with different signal noise. These data were never part of the training set, nor validation, nor testing set during the training, and constituted just an additional independent test for
 the already trained model.
