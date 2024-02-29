@@ -86,4 +86,41 @@ We implemented the architecture using the Keras libraries in TensorFlow 2. The m
 
 ### DNN Keras Models and Results 
 [![Data](https://img.shields.io/badge/Models_DNN-Keras-orange)]() ModelsDNN [ [Data](https://drive.google.com/drive/folders/1zjwc-_P6zjsmc77BdwgBhxrEhBGw8Igz?usp=sharing) ] <br>
-
+For training we chose the "binary crossentropy"
+loss function, which is standard for binary classification problems,
+while the optimizer was "Adam" (Adaptive Moment Estimation) as
+these are common choices. A special treatment was devoted to the kernel
+of the 2D convolutional layers. Indeed, since the kernel of these
+layers express the ability of the convolutional process in enlarging
+a specific portion of the pattern, we explored a range of possible
+kernels between 1 to 32. Apart from the models with kernel $<$5, the
+results were homogenous and summarized in Fig.  
+<figure style="text-align: center;">
+  <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/AccuracyLossEpoch.png" alt="Data Pipeline" width="400" />
+  <figcaption>On top: in the graphic is depicted the accuracy for every epoch of the training (0-24) for all models with kernel ranging from 20 to 30.  On the bottom : the image depicts the loss function for every epoch of the training (0-24) for all models with kernel ranging from 20 to 30.</figcaption>
+</figure>
+All models were trained on 25 epochs with a batch size of 64 and
+their test accuracy ranged from 90.6\% (model with kernel 1) to 98.7\%
+(model with kernel 23, 24 and 27) with a test loss of 0.2221 and 0.037106.
+To enhance the robustness of the model, instead of selecting a single
+kernel and using one model for inference, we selected all models with
+kernels ranging between 20 and 30 and took the consensus between the
+models. This technique ensures more stability in the overall architecture
+and is often considered best practice.
+<figure style="text-align: center;">
+  <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Accuracy-Loss-Sensitivity.png" alt="Data Pipeline" width="400" />
+  <figcaption>Each of the 32 models, with kernel
+sizes varying from 1 to 31, was evaluated for test loss, sensitivity
+at a specificity of 0.5, and accuracy. The resulting graphs depict
+a monotonic trend correlating with the increasing kernel sizes, which
+eventually stabilizes in the range from kernel size 20 to 31.</figcaption>
+</figure>
+<figure style="text-align: center;">
+  <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ConfusionMatrixBiologicalModelNHData.png" alt="Data Pipeline" width="400" />
+  <figcaption>The confusion matrix for the biological
+model over the non-homogeneous data labels serotonergic cells as 0
+and non-serotonergic cells as 1. The matrix shows the True Positive
+Rate 94.4\% at the Top-Left; the False Negative Rate 5.6\% at the
+Bottom-Left; the False Positive Rate 11\% at the Top-Right; and the
+True Negative Rate 88.4\% at the Bottom-Right.</figcaption>
+</figure>
