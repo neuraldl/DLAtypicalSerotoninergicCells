@@ -94,9 +94,8 @@ We implemented the architecture using the Keras libraries in TensorFlow 2. The m
 | Dropout               | (None, 1600)        | 0         |
 | Dense                 | (None, 2)           | 3202      |
 | **Total Params**      | **45218**           |           |
-Summary of the CNN architectural model with kernel 20 used for the
-neural network. Other models follow the same architectural structure
-and change only for the dimension of the kernel. 
+
+Summary of the CNN architectural model with kernel 20 used for the neural network. Other models follow the same architectural structure and change only for the dimension of the kernel. 
 
 <figure style="text-align: center;">
   <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ArchitectureWork2.png" alt="Data Pipeline" width="500" />
