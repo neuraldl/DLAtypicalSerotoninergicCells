@@ -124,3 +124,17 @@ Rate 94.4\% at the Top-Left; the False Negative Rate 5.6\% at the
 Bottom-Left; the False Positive Rate 11\% at the Top-Right; and the
 True Negative Rate 88.4\% at the Bottom-Right.</figcaption>
 </figure>
+Regarding the synthetic data, the confusion matrix values vary with
+each training session. The highest values attained by the synthetic
+data match those of the original data, specifically a 94.4\% True
+Positive Rate, 5.6\% False Negative Rate; 88.4\% True Negative Rate
+and 11\% False Positive Rate. The average values for the synthetic
+data across training sessions are 91.2\% for True Positive Rate, 0.8\%
+for False Negative Rate; 87.6\% for True Negative Rate and 12.3\%
+for False Positive Rate. These Fig.s for the synthetic data closely
+align with those of the original data, indicating no overfitting specifically
+due to the noise in the recorded signal.
+
+##Acknowledgments
+The original recordings and measurements of the spikes recorded in .abf files were performed
+by Dr. Boris Mlinar and Dr. Alberto Montalbano. 
