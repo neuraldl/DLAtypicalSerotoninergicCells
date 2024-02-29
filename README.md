@@ -81,7 +81,8 @@ the already trained model.
 The architecture of the models is a sequence of layers commonly used in deep learning, specifically in the context of convolutional neural networks (CNNs) for image or signal processing.
 We implemented the architecture using the Keras libraries in TensorFlow 2. The model of the neural network consists of a normalization layer for stabilizing the learning process and reducing training time; two repetitions of a 2D convolutional layer with 32 filters and a max pooling layer with a pool size of (2x1); a flatten layer to connect to a dropout layer and dense layers with 2 output units used for binary classification. Activation functions of the convolutional layers are the ReLU, while for the dense layer we used the classic sigmoid. For training we chose the "binary crossentropy" loss function, which is standard for binary classification problems, while the optimizer was "Adam" (Adaptive Moment Estimation) as these are common choices. A special treatment was devoted to the kernel of the 2D convolutional layers. Indeed, since the kernel of these layers express the ability of the convolutional process in enlarging a specific portion of the pattern, we explored a range of possible kernels between 1 to 32.   
 
-**Table 1: Summary of the Model**
+**Table 1: Summary of the Single Model**
+Note: the overall architecture is given by the consensus of these models with 20 < Kernel <30.
 
 | *Layer (type)*        | *Output Shape*      | *Param #* |
 |-----------------------|---------------------|-----------|
@@ -94,8 +95,7 @@ We implemented the architecture using the Keras libraries in TensorFlow 2. The m
 | Dropout               | (None, 1600)        | 0         |
 | Dense                 | (None, 2)           | 3202      |
 | **Total Params**      | **45218**           |           |
-
-Summary of the CNN architectural model with kernel 20 used for the neural network. Other models follow the same architectural structure and change only for the dimension of the kernel. 
+ 
 
 <figure style="text-align: center;">
   <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ArchitectureWork2.png" alt="Data Pipeline" width="500" />
