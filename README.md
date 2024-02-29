@@ -39,10 +39,10 @@ In this GitHub repository are available the following:
 }
 ```
 
-## Data Requirements
-Libraries: TensorFlow version 2.14
-
-Download on your local device or cloud service below folders:
+## Data Requirements and Instructions
+[![Data](https://img.shields.io/badge/TensorFlow-2.14-orange)]() Libraries: TensorFlow version 2.14
+Download on your local device or cloud service the data folders.
+Notebooks are all available on Google Colab.
 
 ## Original Data
 [![Data](https://img.shields.io/badge/SER-Original-blue)]() SER Cellulars [ [Data](https://drive.google.com/drive/folders/1OH8HZlfHk17qekf3vjGcXjaARikYGg2E?usp=sharing) ]<br>
