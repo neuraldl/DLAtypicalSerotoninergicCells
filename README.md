@@ -135,6 +135,6 @@ for False Positive Rate. These Fig.s for the synthetic data closely
 align with those of the original data, indicating no overfitting specifically
 due to the noise in the recorded signal.
 
-##Acknowledgments
+## Acknowledgments
 The original recordings and measurements of the spikes recorded in .abf files were performed
-by Dr. Boris Mlinar and Dr. Alberto Montalbano. 
+by [Dr. Boris Mlinar](https://loop.frontiersin.org/people/98296/overview) and [Dr. Alberto Montalbano](https://loop.frontiersin.org/people/110587/overview). 
