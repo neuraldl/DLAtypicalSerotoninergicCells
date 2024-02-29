@@ -40,7 +40,8 @@ In this GitHub repository are available the following:
 ```
 
 ## Data Requirements and Instructions
-[![Data](https://img.shields.io/badge/TensorFlow-2.14-orange)]() Libraries: TensorFlow version 2.14 <br>
+[![Data](https://img.shields.io/badge/TensorFlow-2.14-orange)]()<br>
+Libraries: TensorFlow version 2.14 <br>
 Download on your local device or cloud service the data folders. <br>
 Notebooks are all available on Google Colab. <br>
 
