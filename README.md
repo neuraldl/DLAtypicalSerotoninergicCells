@@ -11,7 +11,7 @@
 This repository is aimed to collect the data and models used for *Deep Learning Models for Atypical Serotoninergic Cells Recognition* by Corradetti Daniele, Bernardi Alessandro, Corradetti Renato. The work proposes an innovative deep learning approach to accurately identify both typical and atypical serotonergic neurons using convolutional neural networks (CNNs). The research is based on electrophysiological recordings from dorsal raphe nucleus slices of transgenic mice, incorporating both original and synthetic spike samples to enhance model reliability and mitigate overfitting. This study not only challenges traditional neuron identification methods but also enhances the understanding of the serotonergic system's diversity, offering robust models for neuron classification validated across diverse data sets.
 
 ## Overview
-Traditional methods for identifying serotonergic neurons are based on specific electrophysiological characteristics, yet this approach often overlooks atypical neurons, thus limiting our understanding of the serotonergic system's diversity. To address this, we propose deep learning models capable of recognizing both typical and atypical serotonergic and non-serotonergic neurons with high accuracy.The research utilized electrophysiological recordings from dorsal raphe nucleus slices of transgenic mice, expressing fluorescent proteins specific to the serotonergic system. These recordings formed the basis of the training, validation, and testing data for the deep learning models. The study employed convolutional neural networks (CNNs), known for their efficiency in pattern recognition, to classify neurons based on the specific characteristics of their action potentials. The models were trained on a dataset comprising 43,327 original spike samples, alongside an extensive set of 6.7 million synthetic spike samples, designed to mitigate the risk of overfitting the background noise in the recordings, a potential source of bias. Results showed that the models achieved high accuracy and were further validated on "non-homogeneous" data, i.e., data not used for constructing the model, to confirm their robustness and reliability in real-world experimental conditions.
+Traditional methods for identifying serotonergic neurons are based on specific electrophysiological characteristics, yet this approach often overlooks atypical neurons, thus limiting our understanding of the serotonergic system's diversity. To address this, we propose deep learning models capable of recognizing both typical and atypical serotonergic and non-serotonergic neurons with high accuracy.The research utilized electrophysiological recordings from dorsal raphe nucleus slices of transgenic mice, expressing fluorescent proteins specific to the serotonergic system. These recordings formed the basis of the training, validation, and testing data for the deep learning models. The study employed convolutional neural networks (CNNs), known for their efficiency in pattern recognition, to classify neurons based on the specific characteristics of their action potentials. The models were trained on a dataset comprising 43,327 original spike samples, alongside an extensive set of 12 million synthetic spike samples, designed to mitigate the risk of overfitting the background noise in the recordings, a potential source of bias. Results showed that the models achieved high accuracy and were further validated on "non-homogeneous" data, i.e., data not used for constructing the model, to confirm their robustness and reliability in real-world experimental conditions.
 <div>
   <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure2.png" alt="Figure 2" width="368" style="display:inline-block;" />
   <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/Figure3.png" alt="Figure 3" width="400" style="display:inline-block;" />
@@ -23,7 +23,7 @@ In this GitHub repository are available the following:
 1. the .abf recordings of original training data and the non-homogenous data,
 2. the 43,327 single spikes samples of the original training data stored in .csv files of 160 points,
 3. the 24,616 single spikes samples of the non-homogenous data stored in .csv files of 160 points,
-4. the 6,675,300 million single spikes samples of the synthetic data stored as numpy vector,
+4. 12,700,600 million single action potentials of the synthetic data stored as numpy vector,
 5. the trained models with different kernels,
 6. the results of the models,
 7. the Python notebooks for training of the models and for inference.
@@ -62,17 +62,17 @@ All the samples were then randomly subdivided into 30,328 for training, 6,500 fo
 [![Data](https://img.shields.io/badge/SER-Synthetic-red)]() SER Cellulars [ [Data](https://drive.google.com/drive/folders/1HumEKutqUtAkbassrVvXY6vZ3ALryLEm?usp=sharing) ] <br>
 [![Data](https://img.shields.io/badge/NSER-Synthetic-red)]() [NSER Cellulars [ [Data](https://drive.google.com/drive/folders/1j0hwJ2H_GCJT7xXt05YjgNWIB1JRzPww?usp=sharing) ] <br>
 
-The synthetic data consisted in 6,675,300 spike samples of 160 points (simulating 4 ms at 40 kHz of sampling) arising from the 43327 original training data samples. From the original training data recordings we extracted 600 noise masks.
+The synthetic data consisted in 12,700,600 action potentials samples of 160 points (simulating 4 ms at 40 kHz of sampling), 6,675,300 of which emulated action potentials from serotonergic cells and 6,025,300 from non-serotonergic action potentials. From the original training data recordings we extracted 600 noise masks.
 <figure style="text-align: center;">
   <img src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/SyntheticData.png" alt="Data Pipeline" width="400" />
   <figcaption>Example of 4 synthetic spikes generated by the event triggered at 1007585, i.e. 25.189 sec, of the serotonergic cell A140313#073. Top trace: the original recording of the event. The panels report four spike obtained by processing the original trace with different noise masks.</figcaption>
 </figure>
 
-## Non-Homogeonous Data
+## Non-Homogeneous Data
 [![Data](https://img.shields.io/badge/SER-Non--Hom-green)]() SER Cellulars [ [Data](https://drive.google.com/drive/folders/1XyLrbP1sxxOk67H8gqVojcj1wM53QXkn?usp=sharing) ] <br>
 [![Data](https://img.shields.io/badge/NSER-Non--Hom-green)]() NSER Cellulars [ [Data](https://drive.google.com/drive/folders/1-4eZgkowcaDTr8z4ylcT5YxMkn3OPStD?usp=sharing) ] <br>
 
-The non-homogenous data consisted in 24,616 samples extracted from 55 serotonergic cells (18,595 spikes) and 26 non-serotonergic cells (6,021 spikes) collected in experimental days not used to obtain the training data, thus with different signal noise. These data were never part of the training set, nor validation, nor testing set during the training, and constituted just an additional independent test for
+The non-homogeneous data consisted in 24,616 samples extracted from 55 serotonergic cells (18,595 spikes) and 26 non-serotonergic cells (6,021 spikes) collected in experimental days not used to obtain the training data, thus with different signal noise. These data were never part of the training set, nor validation, nor testing set during the training, and constituted just an additional independent test for
 the already trained model.
 
 ## Models and Results
@@ -132,26 +132,7 @@ sizes varying from 1 to 31, was evaluated for test loss, sensitivity
 at a specificity of 0.5, and accuracy. The resulting graphs depict
 a monotonic trend correlating with the increasing kernel sizes, which
 eventually stabilizes in the range from kernel size 20 to 31.</figcaption>
-</figure>
-<figure style="text-align: center;">
-  <img style="text-align: center;" src="https://github.com/neuraldl/DLAtypicalSerotoninergicCells/blob/main/images/ConfusionMatrixBiologicalModelNHData.png" alt="Data Pipeline" width="400" />
-  <figcaption>The confusion matrix for the biological
-model over the non-homogeneous data labels serotonergic cells as 0
-and non-serotonergic cells as 1. The matrix shows the True Positive
-Rate 94.4% at the Top-Left; the False Negative Rate 5.6% at the
-Bottom-Left; the False Positive Rate 11% at the Top-Right; and the
-True Negative Rate 88.4% at the Bottom-Right.</figcaption>
-</figure>
-Regarding the synthetic data, the confusion matrix values vary with
-each training session. The highest values attained by the synthetic
-data match those of the original data, specifically a 94.4% True
-Positive Rate, 5.6% False Negative Rate; 88.4% True Negative Rate
-and 11% False Positive Rate. The average values for the synthetic
-data across training sessions are 91.2% for True Positive Rate, 0.8%
-for False Negative Rate; 87.6% for True Negative Rate and 12.3%
-for False Positive Rate. These Fig.s for the synthetic data closely
-align with those of the original data, indicating no overfitting specifically
-due to the noise in the recorded signal.
+ 
 
 ## Acknowledgments
 The original recordings and measurements of the spikes recorded in .abf files were performed
